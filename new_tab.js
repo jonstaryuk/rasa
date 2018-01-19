@@ -14,6 +14,10 @@ chrome.storage.sync.get({
     bg.style.background = (opt.color.length > 0) ? opt.color : newGradient()
 })
 
+window.setTimeout(() => {
+    bg.style.opacity = 1
+}, 10)
+
 window.setInterval(() => {
     refreshTime()
 }, 15000)
