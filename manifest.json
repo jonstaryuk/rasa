@@ -2,7 +2,8 @@
    "manifest_version": 2,
 
    "name": "Rasa",
-   "description": "Blank new tab page",
+   "short_name": "Rasa",
+   "description": "A minimal, fast-loading new tab page with optional clock and background colors.",
    "version": "1.3.0",
 
    "icons": {
