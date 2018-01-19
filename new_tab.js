@@ -1,13 +1,13 @@
 var bg = document.getElementById('bg')
 var time = document.getElementById('time')
 
-refreshTime()
-
 chrome.storage.sync.get({
     clockEnabled: true,
     color: "",
 }, (opt) => {
-    if (!opt.clockEnabled) {
+    if (opt.clockEnabled) {
+        refreshTime()
+    } else {
         time.style.display = 'none'
     }
 
@@ -16,7 +16,7 @@ chrome.storage.sync.get({
 
 window.setTimeout(() => {
     bg.style.opacity = 1
-}, 10)
+}, 15)
 
 window.setInterval(() => {
     refreshTime()
